@@ -1,23 +1,23 @@
-# Jobber Provider for OAuth 2.0 Client
+# Close Provider for OAuth 2.0 Client
 
 ## Installation
 
 To install, use composer:
 
 ```
-composer require shep517/oauth2-jobber
+composer require shep517/oauth2-close
 ```
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\Shep517\OAuth2\Client\Provider\Jobber` as the provider.
+Usage is the same as The League's OAuth client, using `\Shep517\OAuth2\Client\Provider\Close` as the provider.
 
 ### Authorization Code Flow
 
 ```php
-$provider = new \Shep517\OAuth2\Client\Provider\Jobber([
-    'clientId'          => '{jobber-client-id}',
-    'clientSecret'      => '{jobber-client-secret}',
+$provider = new \Shep517\OAuth2\Client\Provider\Close([
+    'clientId'          => '{close-client-id}',
+    'clientSecret'      => '{close-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
 ]);
 ```
@@ -27,9 +27,9 @@ For further usage of this package please refer to the [core package documentatio
 
 - [Jon Sheppard](https://github.com/shep517)
 - [Chad Hutchins](https://github.com/chadhutchins) - piggybacked
-- [All Contributors](https://github.com/shep517/oauth2-jobber/contributors)
+- [All Contributors](https://github.com/shep517/oauth2-close/contributors)
 
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/shep517/oauth2-jobber/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/shep517/oauth2-close/blob/master/LICENSE) for more information.

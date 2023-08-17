@@ -8,7 +8,7 @@ use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
-class Jobber extends AbstractProvider
+class Close extends AbstractProvider
 {
     use BearerAuthorizationTrait;
 
@@ -41,7 +41,8 @@ class Jobber extends AbstractProvider
     public function getBaseAuthorizationUrl()
     {
         // return 'https://api.getjobber.com/api/oauth/authorize?client_id=<CLIENT_ID>&redirect_uri=<CALLBACK_URL>&state=<STATE>';
-        return 'https://api.getjobber.com/api/oauth/authorize';
+        // return 'https://app.close.com/oauth2/authorize/?client_id=CLIENT_ID&response_type=code';
+        return 'https://app.close.com/oauth2/authorize/';
     }
 
     /**
@@ -51,7 +52,7 @@ class Jobber extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return 'https://api.getjobber.com/api/oauth/token';
+        return 'https://api.close.com/oauth2/token/';
     }
 
     /**
@@ -63,7 +64,7 @@ class Jobber extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return 'https://api.getjobber.com/api/';
+        return 'https://api.close.com/api/v1/me/';
     }
 
     /**
@@ -115,10 +116,10 @@ class Jobber extends AbstractProvider
      *
      * @param object $response
      * @param AccessToken $token
-     * @return JobberResourceOwner
+     * @return CloseResourceOwner
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        return new JobberResourceOwner($response);
+        return new CloseResourceOwner($response);
     }
 }

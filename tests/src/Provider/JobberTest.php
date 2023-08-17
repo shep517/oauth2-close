@@ -5,7 +5,7 @@ namespace Shep517\OAuth2\Client\Test\Provider;
 use League\OAuth2\Client\Tool\QueryBuilderTrait;
 use Mockery as m;
 
-class JobberTest extends \PHPUnit_Framework_TestCase
+class CloseTest extends \PHPUnit_Framework_TestCase
 {
     use QueryBuilderTrait;
 
@@ -13,7 +13,7 @@ class JobberTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->provider = new \Shep517\OAuth2\Client\Provider\Jobber([
+        $this->provider = new \Shep517\OAuth2\Client\Provider\Close([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',
@@ -56,7 +56,7 @@ class JobberTest extends \PHPUnit_Framework_TestCase
         $url = $this->provider->getAuthorizationUrl();
         $uri = parse_url($url);
 
-        $this->assertEquals('login.jobber.com', $uri['host']);
+        $this->assertEquals('login.close.com', $uri['host']);
         $this->assertEquals('oauth2/authorize', $uri['path']);
     }
 
@@ -67,7 +67,7 @@ class JobberTest extends \PHPUnit_Framework_TestCase
         $url = $this->provider->getBaseAccessTokenUrl($params);
         $uri = parse_url($url);
 
-        $this->assertEquals('login.jobber.com', $uri['host']);
+        $this->assertEquals('login.close.com', $uri['host']);
         $this->assertEquals('/oauth2/token', $uri['path']);
     }
 

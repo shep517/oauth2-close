@@ -1,5 +1,5 @@
 # Changelog
-All Notable changes to `oauth2-jobber` will be documented in this file
+All Notable changes to `oauth2-close` will be documented in this file
 
 ## 0.1.0 - 2019-02-21
 

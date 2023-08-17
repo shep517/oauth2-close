@@ -5,7 +5,7 @@ namespace Shep517\OAuth2\Client\Provider;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use League\OAuth2\Client\Tool\ArrayAccessorTrait;
 
-class JobberResourceOwner implements ResourceOwnerInterface
+class CloseResourceOwner implements ResourceOwnerInterface
 {
     use ArrayAccessorTrait;
 

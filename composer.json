@@ -1,6 +1,6 @@
 {
-    "name": "shep517/oauth2-jobber",
-    "description": "Jobber OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "name": "shep517/oauth2-close",
+    "description": "Close.io OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
         "client",
         "authorization",
         "authorisation",
-        "jobber"
+        "close"
     ],
     "require": {
         "league/oauth2-client": "^2.0"
